@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kseflib"
+version = "0.1.0"
+description = "Library for interacting with KSeF (Polish National e-Invoice System)"
+requires-python = ">=3.9"
+dependencies = [
+    "requests",
+    "lxml",
+    "signxml",
+    "cryptography",
+]
+
+[tool.setuptools]
+py-modules = ["kseflib"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-mock>=3.10.0",
+    "pytest-cov>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]

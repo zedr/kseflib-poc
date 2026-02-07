@@ -1,0 +1,12 @@
+.venv
+.coverage
+__pycache__/
+*.egg-info/
+*.lock
+
+context/
+
+*.p12
+*.crt
+*.key
+*.pass.txt
